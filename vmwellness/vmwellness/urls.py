@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include, url
+from vmwellnessapp import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^dashboard/?$', v.dashboard),
+    url(r'^water/?$', v.water_tracker),
+    url(r'^stream/?$', v.activity_stream),
+    url(r'^goals/?$', v.goals),
+    url(r'^resources/?$', v.resources),
+    url(r'^about/?$', v.about)
 ]
