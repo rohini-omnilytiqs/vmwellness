@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-
+BASE_DIR = os.path.join(os.getcwd(), "../")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -25,12 +25,13 @@ SECRET_KEY = 'ag8v7&)2xizfqz1xgbh8inetkrfnzm%pc4#5^git!uhnq!fz*q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'vmwellness',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
