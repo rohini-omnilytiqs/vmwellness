@@ -24,26 +24,16 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< Updated upstream
-    url(r'^$', v.Dashboard.as_view()),
-    url(r'^dashboard/?$', v.Dashboard.as_view()),
-=======
     url(r'^$', v.Dashboard.as_view(), name="dashboard"),
     url(r'^dashboard/?$', v.Dashboard.as_view(), name="dashboard"),
->>>>>>> Stashed changes
     url(r'^water/?$', v.WaterTracker.as_view()),
     url(r'^activitystream/?$', v.ActivityStream.as_view()),
     url(r'^goals/?$', v.Goals.as_view()),
     url(r'^resources/?$', v.Resources.as_view()),
     url(r'^about/?$', v.About.as_view()),
-<<<<<<< Updated upstream
-    url('about', v.About.as_view())
-=======
-    url('about', v.About.as_view()),
     path('signup/',v.signup,name="sign-up"),
     path('logout/', v.logout_request, name='logout'),
     url(r'^login/$', v.login_request, name='login')
->>>>>>> Stashed changes
 ]
 
 urlpatterns += staticfiles_urlpatterns()
