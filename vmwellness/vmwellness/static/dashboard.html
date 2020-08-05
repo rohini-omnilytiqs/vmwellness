@@ -1,3 +1,6 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,13 +14,13 @@
   <title>VMwellness</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
 
   <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
 
 </head>
 
@@ -34,22 +37,22 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="dashboard.html">Home</a>
+            <a class="nav-link" href="dashboard">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="post.html">Goals</a>
+            <a class="nav-link" href="goals">Goals</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="water_tracker.html">Water Tracker</a>
+            <a class="nav-link" href="water">Water Tracker</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="wellness_stream.html">Wellness Stream</a>
+            <a class="nav-link" href="activitystream">Wellness Stream</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="resources.html">Resources</a>
+            <a class="nav-link" href="resources">Resources</a>
           </li>
         </ul>
       </div>
@@ -117,11 +120,11 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+  <script src="{% static 'js/clean-blog.min.js' %}"></script>
 
 </body>
 

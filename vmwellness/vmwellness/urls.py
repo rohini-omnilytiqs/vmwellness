@@ -17,13 +17,19 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
 from vmwellnessapp import views as v
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^dashboard/?$', v.dashboard),
-    url(r'^water/?$', v.water_tracker),
-    url(r'^stream/?$', v.activity_stream),
-    url(r'^goals/?$', v.goals),
-    url(r'^resources/?$', v.resources),
-    url(r'^about/?$', v.about)
+    url(r'^$', v.Dashboard.as_view()),
+    url(r'^dashboard/?$', v.Dashboard.as_view()),
+    url(r'^water/?$', v.WaterTracker.as_view()),
+    url(r'^activitystream/?$', v.ActivityStream.as_view()),
+    url(r'^goals/?$', v.Goals.as_view()),
+    url(r'^resources/?$', v.Resources.as_view()),
+    url(r'^about/?$', v.About.as_view()),
+    url('about', v.About.as_view())
 ]
+
+urlpatterns += staticfiles_urlpatterns()
