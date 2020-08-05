@@ -15,7 +15,6 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = str(os.path.join(os.getcwd(), '../'))
-<<<<<<< Updated upstream
 
 # create a project root
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -23,12 +22,10 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 # create static file directory
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
+    BASE_DIR + 'vmwellness/vmwellness/templates',
 )
 STATIC_URL = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static')
 
-=======
-LOGIN_REDIRECT_URL = 'goals'
->>>>>>> Stashed changes
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -68,11 +65,7 @@ ROOT_URLCONF = 'vmwellness.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< Updated upstream
         'DIRS': STATICFILES_DIRS,
-=======
-        'DIRS': [BASE_DIR + 'vmwellness/vmwellness/templates'],
->>>>>>> Stashed changes
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
