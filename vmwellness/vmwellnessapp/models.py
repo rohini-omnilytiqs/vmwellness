@@ -16,7 +16,7 @@ class Activies(models.Model):
     post_time = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length = 140)
     anon = models.BooleanField(default = True)
-    name = models.CharField(max_length = 100)
+    name = models.CharField(max_length = 100, null=True, blank=True)
 
 
 class Water(models.Model):
@@ -24,7 +24,6 @@ class Water(models.Model):
     userId = models.ForeignKey(User, null=True, blank=True, related_name='water_userId', on_delete=models.CASCADE)
     consumptionGoal = models.IntegerField(default=64)
     currAmountConsumed = models.IntegerField(default=0)
-
 
 class Checklist(models.Model):
 
