@@ -1,12 +1,159 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Resources</title>
-    <!-- Custom styles for this template -->
-  <link href="css/resources.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>VMwellness</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+
 </head>
+
 <body>
-this is a resources test
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="dashboard.html">VMwellness</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goals">Goals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="water">Water Tracker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activitystream">Wellness Stream</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources">Resources</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>WMwellness Resources</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Wellness Resources</h2>
+    <h3>Full-Body and Yoga</h3>
+    <p>https://www.youtube.com/watch?v=UBMk30rjy0o</p>
+    <p>https://www.youtube.com/watch?v=r6Rle5hK1cQ</p>
+
+    <h3>Meal-Prep</h3>
+    <p>https://www.youtube.com/watch?v=17Bagme20IM</p>
+    <p>https://greatist.com/eat/easy-meal-prep-ideas-in-30-minutes-or-less</p>
+
+    <h3>Slack Channels</h3>
+    <p>#Mental-health</p>
+
+    <h3>VMware Ergonomics</h3>
+    <p>Update your ergonomics via WorkspaceONE</p>
+
+    <h2>VMware Provided Resources</h2>
+    <h3>Health and Wellness guidelines </h3>
+    <p>https://source.vmware.com/intranet/document/5838/Health%20and%20Well-Being%20Guidelines%20-%20August%202020_0.pdf</p>
+
+    <h3>Wellness Wednesday</h3>
+    <p>https://source.vmware.com/intranet/document/6638/Wellness-Wednesday-GRIT.pdf</p>
+
+    <h3>VMware Blog: Work from Home Tips</h3>
+    <p>https://blogs.vmware.com/code/2020/03/16/working-from-home-tips-from-a-remote-worker/</p>
+
+    <h3>Wellness team activities</h3>
+    <p>https://risepeople.com/blog/8-activities-to-incorporate-into-your-workplace-wellness-program/</p>
+    <p>https://www.wellsteps.com/blog/2020/01/02/office-challenge-ideas-office-fitness-challenges/</p>
+
+    <h3>VMware Podcasts</h3>
+    <p>https://communities.vmware.com/groups/podcasts/overview</p>
+
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; VMware Borathon 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/clean-blog.min.js' %}"></script>
+
 </body>
+
 </html>
