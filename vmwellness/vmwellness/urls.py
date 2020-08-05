@@ -14,22 +14,36 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.urls import path
 from django.conf.urls import include, url
+from django.contrib.auth.forms import UserCreationForm
 from vmwellnessapp import views as v
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< Updated upstream
     url(r'^$', v.Dashboard.as_view()),
     url(r'^dashboard/?$', v.Dashboard.as_view()),
+=======
+    url(r'^$', v.Dashboard.as_view(), name="dashboard"),
+    url(r'^dashboard/?$', v.Dashboard.as_view(), name="dashboard"),
+>>>>>>> Stashed changes
     url(r'^water/?$', v.WaterTracker.as_view()),
     url(r'^activitystream/?$', v.ActivityStream.as_view()),
     url(r'^goals/?$', v.Goals.as_view()),
     url(r'^resources/?$', v.Resources.as_view()),
     url(r'^about/?$', v.About.as_view()),
+<<<<<<< Updated upstream
     url('about', v.About.as_view())
+=======
+    url('about', v.About.as_view()),
+    path('signup/',v.signup,name="sign-up"),
+    path('logout/', v.logout_request, name='logout'),
+    url(r'^login/$', v.login_request, name='login')
+>>>>>>> Stashed changes
 ]
 
 urlpatterns += staticfiles_urlpatterns()
