@@ -75,14 +75,16 @@
 
   <!-- Main Content -->
   {% block body %}
-  <form class="container">
+  <div class="container">
     <h2>Share your Wellness Activities!</h2>
+    {% if do_post %}
     <form method="post">
           {% csrf_token %}
-          {{ form.as_P }}
+          {{ form.as_p }}
       <button type="submit">Upload</button>
+      {% endif %}
   </form>
-  </form>
+  </div>
 
         {% for item in activies %}
             <h1>{{ item.status }}</h1>
