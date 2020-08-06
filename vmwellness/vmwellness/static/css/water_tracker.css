@@ -17,6 +17,11 @@ button{
       margin: 40px 40px;
 }
 
+.site-heading {
+   font-weight: bolder;
+   color: #ffffff;
+   font-size: 20px;
+}
 
 a {
    font-size: 30px;

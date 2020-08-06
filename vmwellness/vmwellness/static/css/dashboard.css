@@ -17,9 +17,10 @@ a {
 }
 
 .site-heading {
-    font-style: bold;
-    color: #1A428A;
-}
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 20px;
+ }
 
 h1 {
      font-size: 28px;
