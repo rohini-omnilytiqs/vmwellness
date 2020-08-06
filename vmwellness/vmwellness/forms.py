@@ -20,7 +20,7 @@ class InitialWaterTrackerForm(forms.ModelForm):
         }
 
 class UpdateWaterTrackerForm(forms.ModelForm):
-    additional_amount = forms.CharField(label='Additional Amount of Water Consumed')
+    additional_amount = forms.CharField(label='How much water have you had? ')
     class Meta:
         model = Water
         fields = []

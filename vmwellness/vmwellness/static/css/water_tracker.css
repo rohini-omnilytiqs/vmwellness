@@ -9,6 +9,15 @@ body {
      font-family: 'Metropolis';
  }
 
+.button{
+   margin: 40px 40px;
+}
+
+button{
+      margin: 40px 40px;
+}
+
+
 a {
    font-size: 30px;
    font-family: 'Metropolis';
