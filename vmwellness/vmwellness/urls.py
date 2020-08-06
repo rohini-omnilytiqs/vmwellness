@@ -33,7 +33,8 @@ urlpatterns = [
     url(r'^about/?$', v.About.as_view()),
     path('signup/',v.signup,name="sign-up"),
     path('logout/', v.logout_request, name='logout'),
-    url(r'^login/$', v.login_request, name='login')
+    url(r'^login/$', v.login_request, name='login'),
+    path('reroute/', v.reroute, name='reroute')
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -9,7 +9,11 @@ from django.views.generic import TemplateView
 from vmwellness.forms import *
 #from vmwellness.forms import SignUpForm
 
-
+def reroute(request):
+    if request.user.is_authenticated:
+        return redirect('/logout')
+    else:
+        return redirect('/login')
 
 # Create your views here.
 def login_request(request):
@@ -22,6 +26,8 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 return redirect('/dashboard')
+        else:
+            return redirect('/signup')
     form = AuthenticationForm()
     return render(request = request,
                   template_name = "registration/login.html",
@@ -145,9 +151,13 @@ class ActivityStream(TemplateView):
     template_name = 'wellness_stream.html'
 
     def get(self, request):
-        form = ActiviesForm()
-        activies = Activies.objects.order_by('-post_time') #query set which contains stuff from the table
-        args = { 'activies': activies, 'form':form, 'do_post':True}
+        # check for user login
+        if not is_logged_in(request):
+            args = {'logged_on': True}
+        else:
+            form = ActiviesForm()
+            activies = Activies.objects.order_by('-post_time') #query set which contains stuff from the table
+            args = { 'activies': activies, 'form':form, 'do_post':True}
 
         return render(request, self.template_name, args)
 
