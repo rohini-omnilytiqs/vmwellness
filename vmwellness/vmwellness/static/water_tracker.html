@@ -75,6 +75,7 @@
   <!-- Main Content -->
   {% block body %}
   <div class="container">
+
     <h2><pre> </pre></h2> <!-- for spacing -->
     <h3>
       <pre>{{ water_goal }} oz         {{ water_consumed }} oz          {{ percent_complete }}%</pre>
@@ -82,6 +83,7 @@
     <h5>
       <pre>          Goal         Water Consumed      Percent Complete</pre>
     </h5>
+    
     <h3><pre> </pre></h3> <!-- for spacing -->
     {% if is_put %}
     <form method="post">
