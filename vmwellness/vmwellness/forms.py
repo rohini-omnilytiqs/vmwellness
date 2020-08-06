@@ -3,7 +3,7 @@ from vmwellnessapp.models import *
 
 # Create the form class.
 class ActiviesForm(forms.ModelForm):
-    name = forms.CharField()
+    name = forms.CharField(required=False, initial='Anonymous')
     status = forms.CharField()
     class Meta:
         model = Activies
