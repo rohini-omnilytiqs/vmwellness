@@ -77,6 +77,9 @@
   <div class="container">
 
     <h2><pre> </pre></h2> <!-- for spacing -->
+    {% if logged_on %}
+    <h3>Please Log In to Proceed</h3>
+    {% else %}
     <h3>
       <pre>{{ water_goal }} oz         {{ water_consumed }} oz          {{ percent_complete }}%</pre>
     </h3>
@@ -101,6 +104,7 @@
     {% endif %}
     <h3><pre> </pre></h3> <!-- for spacing -->
     <!-- <h4><pre>You got this</pre></h4> -->
+    {% endif %}
   </div>
   {% endblock %}
 

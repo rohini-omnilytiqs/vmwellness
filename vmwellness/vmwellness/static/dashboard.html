@@ -75,9 +75,12 @@
 
   <!-- Main Content -->
   <div class="container">
-    <h2>Dashboard</h2>
-    <p>VMwellness is an interactive web application made to help employees track their own personal wellness goals. The features and resources enable employees to prioritize healthy practices in the workspace. During a global pandemic, where employees are forced to create new offices from their home, the transition can be taxing on overall wellbeing. Our goal is to create an interactive space where employees can prioritize their own wellbeing as they work from home and transition back into the office.
-</p>
+    {% block body %}
+    <h2>Welcome{{ username }}!</h2>
+    <p>
+      VMwellness is an interactive web application made to help employees track their own personal wellness goals. The features and resources enable employees to prioritize healthy practices in the workspace. During a global pandemic, where employees are forced to create new offices from their home, the transition can be taxing on overall wellbeing. Our goal is to create an interactive space where employees can prioritize their own wellbeing as they work from home and transition back into the office.
+    </p>
+    {% endblock %}
   </div>
 
   <hr>
