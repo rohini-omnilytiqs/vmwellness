@@ -45,12 +45,23 @@ def logout_request(request):
         return redirect('/dashboard')
 
 
+# returns true if a user is logged in given a request, otherwise false
+def is_logged_in(request):
+    return str(request.user) != 'AnonymousUser'
+
+
 # create dashboard class
 class Dashboard(TemplateView):
     template_name = 'dashboard.html'
 
     def get(self, request):
-        return render(request, self.template_name)
+        # added to check login status on dashboard
+        args = {'username': ''}
+        if is_logged_in(request):
+            # user is logged in update args to reflect that
+            args['username'] = ' ' + str(request.user)
+
+        return render(request, self.template_name, args)
 
 
 # create a beautiful, elegant water class
@@ -60,24 +71,26 @@ class WaterTracker(TemplateView):
     # get information on the amount of water consumed and the water intake  goal
     def get(self, request):
         # in the future be able to make request with no objects
-        try:
-            obj = Water.objects.get(userId=request.user)  
-            print('object received')
-            form = UpdateWaterTrackerForm()
-            water_consumed = obj.currAmountConsumed 
-            consumption_goal = obj.consumptionGoal 
-            percent_complete = water_consumed/consumption_goal * 100
-            args = {
-                'form': form,
-                'water_consumed': water_consumed,
-                'water_goal': consumption_goal,
-                'percent_complete': percent_complete,
-                'is_put': True
-            }
-        except:
-            print('object was not received')
-            form = InitialWaterTrackerForm()
-            args = {'form': form, 'is_put': False}
+        # check to make user is logged on:
+        if not is_logged_in(request):
+            args = {'logged_on': True}
+        else:
+            try:
+                obj = Water.objects.get(userId=request.user)  
+                form = UpdateWaterTrackerForm()
+                water_consumed = obj.currAmountConsumed 
+                consumption_goal = obj.consumptionGoal 
+                percent_complete = water_consumed/consumption_goal * 100
+                args = {
+                    'form': form,
+                    'water_consumed': water_consumed,
+                    'water_goal': consumption_goal,
+                    'percent_complete': percent_complete,
+                    'is_put': True
+                }
+            except:
+                form = InitialWaterTrackerForm()
+                args = {'form': form, 'is_put': False}
 
         return render(request, self.template_name, args)
 
