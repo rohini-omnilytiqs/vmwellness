@@ -73,10 +73,34 @@
   </header>
 
   <!-- Main Content -->
+  {% block body %}
   <div class="container">
-    <h2>Personalized WaterTracker</h2>
-    <p>water graphic goes here</p>
+    <h2><pre> </pre></h2> <!-- for spacing -->
+    <h3>
+      <pre>{{ water_goal }} oz         {{ water_consumed }} oz          {{ percent_complete }}%</pre>
+    </h3>
+    <h5>
+      <pre>          Goal         Water Consumed      Percent Complete</pre>
+    </h5>
+    <h3><pre> </pre></h3> <!-- for spacing -->
+    {% if is_put %}
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="button">Update</button>
+    </form>
+    {% endif %}
+    {% if not is_put %}
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Set Goal</button>
+    </form>
+    {% endif %}
+    <h3><pre> </pre></h3> <!-- for spacing -->
+    <!-- <h4><pre>You got this</pre></h4> -->
   </div>
+  {% endblock %}
 
   <hr>
 
