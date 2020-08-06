@@ -1,5 +1,5 @@
 import django.forms as forms
-from vmwellness.models import *
+from vmwellnessapp.models import *
 
 # Create the form class.
 class ActiviesForm(forms.ModelForm):
