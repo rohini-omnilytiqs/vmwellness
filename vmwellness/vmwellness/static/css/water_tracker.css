@@ -3,7 +3,7 @@
   * Copyright 2013-2020 Start Bootstrap
   * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
   */
-body {
+pre {
      font-size: 20px;
      color: #1A428A;
      font-family: 'Metropolis';
@@ -13,8 +13,14 @@ body {
    margin: 40px 40px;
 }
 
-button{
+.button{
       margin: 40px 40px;
+}
+
+h3, h5 {
+   font-size: 30px;
+   font-family: 'Metropolis';
+   color: #1A428A;
 }
 
 .site-heading {
@@ -27,7 +33,6 @@ a {
    font-size: 30px;
    font-family: 'Metropolis';
    color: #1A428A;
-
  }
 
 h1 {
@@ -43,7 +48,7 @@ p {
     font-size: 10px;
  }
 
-h2, h3 {
+h2 {
     font-size: 28px;
     font-family: 'Metropolis';
     text-align: center;
