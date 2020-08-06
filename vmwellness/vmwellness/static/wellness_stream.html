@@ -74,10 +74,22 @@
   </header>
 
   <!-- Main Content -->
-  <div class="container">
+  {% block body %}
+  <form class="container">
     <h2>Share your Wellness Activities!</h2>
-    <p>stream goes here</p>
-  </div>
+    <form method="post">
+          {% csrf_token %}
+          {{ form.as_P }}
+      <button type="submit">Upload</button>
+  </form>
+  </form>
+
+        {% for item in activies %}
+            <h1>{{ item.status }}</h1>
+            <p>Posted by {{ item.name }} on {{ item.post_time }}</p>
+        {% endfor %}
+
+    {% endblock %}
 
   <hr>
 

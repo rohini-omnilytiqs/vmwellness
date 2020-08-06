@@ -5,8 +5,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from vmwellnessapp.models import Water, Activies, Checklist
 from django.views.generic import TemplateView
+
 from vmwellness.forms import *
 #from vmwellness.forms import SignUpForm
+
+
 
 # Create your views here.
 def login_request(request):
@@ -141,11 +144,49 @@ class WaterTracker(TemplateView):
 class ActivityStream(TemplateView):
     template_name = 'wellness_stream.html'
 
+
     def get(self, request):
-        return render(request, self.template_name)
+        print('inside get')
+        print(request.method)
+        activies = Activies.objects.order_by('post_time') #query set which contains stuff from the table
+        if activies:
+            form = ActiviesForm()
+            args={ #passing in query set
+                'activies': activies,
+                'form': form
+            }
+        else:
+            form = ActiviesForm()
+            args = {'form': form}
+
+        return render(request, self.template_name, args)
+
+    def post(self, request):
+        print('in post')
+        form = ActiviesForm(request.POST)
+        if form.is_valid():
+            activity_input = form.save(commit=False) #initializing a db obj based off of what user put
+            activity_input.userId = request.user #attaching user to activity_input, populating that field
+
+            #for anon
+            if activity_input.name is False:
+                activity_input.anon = True
+                activity_input.name = "Anonymous"
+                print('in if')
+
+            else:
+                activity_input.anon = False
+                print('in else')
+
+            activity_input.save()
+            return redirect('/activitystream')
+        print('after redirect')
+        args = {'form':form}
+        return render(request, self.template_name, args)
 
 
-# create goals class
+
+        # create goals class
 class Goals(TemplateView):
     template_name = 'goals.html'
 

@@ -3,6 +3,8 @@ from vmwellnessapp.models import *
 
 # Create the form class.
 class ActiviesForm(forms.ModelForm):
+    name = forms.CharField()
+    status = forms.CharField()
     class Meta:
         model = Activies
         fields = ['name', 'status']
@@ -10,6 +12,7 @@ class ActiviesForm(forms.ModelForm):
             "name": "Name (leave blank if anonymous)",
             "status": "status"
         }
+
 
 class InitialWaterTrackerForm(forms.ModelForm):
     class Meta:
