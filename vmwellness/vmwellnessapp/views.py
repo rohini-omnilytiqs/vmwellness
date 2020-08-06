@@ -89,7 +89,7 @@ class WaterTracker(TemplateView):
                 form = UpdateWaterTrackerForm()
                 water_consumed = obj.currAmountConsumed 
                 consumption_goal = obj.consumptionGoal 
-                percent_complete = water_consumed/consumption_goal * 100
+                percent_complete = round(water_consumed/consumption_goal * 100, 2)
                 args = {
                     'form': form,
                     'water_consumed': water_consumed,
