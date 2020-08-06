@@ -16,6 +16,12 @@
 
  }
 
+ .site-heading {
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 20px;
+ }
+
  h1 {
       font-size: 28px;
       font-family: 'Metropolis';
