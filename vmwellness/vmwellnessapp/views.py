@@ -9,12 +9,6 @@ from django.views.generic import TemplateView
 from vmwellness.forms import *
 #from vmwellness.forms import SignUpForm
 
-def reroute(request):
-    if request.user.is_authenticated:
-        return redirect('/logout')
-    else:
-        return redirect('/login')
-
 # Create your views here.
 def login_request(request):
     if request.method == 'POST':
@@ -26,8 +20,6 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 return redirect('/dashboard')
-        else:
-            return redirect('/signup')
     form = AuthenticationForm()
     return render(request = request,
                   template_name = "registration/login.html",
@@ -81,25 +73,22 @@ class WaterTracker(TemplateView):
     def get(self, request):
         # in the future be able to make request with no objects
         # check to make user is logged on:
-        if not is_logged_in(request):
-            args = {'logged_on': True}
-        else:
-            try:
-                obj = Water.objects.get(userId=request.user)  
-                form = UpdateWaterTrackerForm()
-                water_consumed = obj.currAmountConsumed 
-                consumption_goal = obj.consumptionGoal 
-                percent_complete = round(water_consumed/consumption_goal * 100, 2)
-                args = {
+        try:
+            obj = Water.objects.get(userId=request.user)
+            form = UpdateWaterTrackerForm()
+            water_consumed = obj.currAmountConsumed
+            consumption_goal = obj.consumptionGoal
+            percent_complete = round(water_consumed/consumption_goal * 100, 2)
+            args = {
                     'form': form,
                     'water_consumed': water_consumed,
                     'water_goal': consumption_goal,
                     'percent_complete': percent_complete,
                     'is_put': True
                 }
-            except:
-                form = InitialWaterTrackerForm()
-                args = {'form': form, 'is_put': False}
+        except:
+            form = InitialWaterTrackerForm()
+            args = {'form': form, 'is_put': False}
 
         return render(request, self.template_name, args)
 
@@ -151,13 +140,9 @@ class ActivityStream(TemplateView):
     template_name = 'wellness_stream.html'
 
     def get(self, request):
-        # check for user login
-        if not is_logged_in(request):
-            args = {'logged_on': True}
-        else:
-            form = ActiviesForm()
-            activies = Activies.objects.order_by('-post_time') #query set which contains stuff from the table
-            args = { 'activies': activies, 'form':form, 'do_post':True}
+        form = ActiviesForm()
+        activies = Activies.objects.order_by('-post_time') #query set which contains stuff from the table
+        args = {'activies': activies, 'form': form, 'do_post':True}
 
         return render(request, self.template_name, args)
 

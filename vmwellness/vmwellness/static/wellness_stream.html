@@ -79,9 +79,6 @@
   <!-- Main Content -->
   {% block body %}
   <div class="container">
-    {% if logged_on %}
-    <h3>Please Log In to Proceed</h3>
-    {% else %}
     <h2>Share your Wellness Activities!</h2>
     {% if do_post %}
     <form method="post">
@@ -97,7 +94,6 @@
             <p>Posted by {{ item.name }} on {{ item.post_time }}</p>
         {% endfor %}
 
-    {% endif %}
     {% endblock %}
 
 
