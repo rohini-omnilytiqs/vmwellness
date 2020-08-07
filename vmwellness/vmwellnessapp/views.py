@@ -30,6 +30,10 @@ def signup(request):
         f = UserCreationForm(request.POST)
         if f.is_valid():
             f.save()
+            new_user = authenticate(username=f.cleaned_data['username'],
+                                    password=f.cleaned_data['password1'],
+                                    )
+            login(request, new_user)
             return redirect('/dashboard')
     else:
         f = UserCreationForm()
