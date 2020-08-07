@@ -9,6 +9,23 @@
     font-family: 'Metropolis';
 }
 
+.setGoal {
+   margin: auto;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.loginpage {
+   margin: auto;
+}
+
+.water {
+   width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .django {
    margin: auto;
 }
@@ -24,29 +41,40 @@
 }
 
 button {
-  background-color: #48125F;
-  border: none;
-  color: white;
-  padding: 10px 28px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-
+   background-color: #7f35b2;
+   border: none;
+   color: white;
+   padding: 10px 28px;
+   text-align: center;
+   font-size: 16px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   text-decoration: none;
+   cursor: pointer;
+   margin-left:auto;
+   margin-right:auto;
+   margin: auto;
 }
 
 button {border-radius: 12px;}
 
 button:hover {opacity: 1}
 
+h1 {
+   font-size: 28px;
+   font-family: 'Metropolis';
+   text-align: center;
+   margin-top: 5%;
+   color: #ffffff;
+}
 
 h2{
-    color: #1A428A;
-    font-style: bold;
+   font-size: 25px;
+   color: #1A428A;
+   text-align: center;
+   font-family: 'Metropolis';
+   margin: auto;
 }
 
 #grad1 {
@@ -56,6 +84,7 @@ h2{
 
 h6{
     text-align: center;
+    font-size: 20px;
 }
 
 .stream_title{
@@ -94,15 +123,7 @@ a {
   font-size: 30px;
   font-family: 'Metropolis';
   color: #1A428A;
-
 }
-
-h1 {
-   font-size: 28px;
-   font-family: 'Metropolis';
-   text-align: center;
-   margin-top: 5%;
- }
 
 p {
    margin-top: 3%;
@@ -110,11 +131,19 @@ p {
    font-size: 20px;
 }
 
+h5 {
+   font-size: 20px;
+  font-family: 'Metropolis';
+  color: #7f35b2;
+  text-align: center;
+}
+
 h3 {
-   font-size: 28px;
+   font-size: 32px;
    font-family: 'Metropolis';
+   font-weight: 400;
    text-align: center;
-   color: #ffffff;   /* this is a change */
+   color: #0090d2;
    margin-top: 3%;
 }
 

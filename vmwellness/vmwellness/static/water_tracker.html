@@ -19,7 +19,7 @@
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
 
   <!-- water_tracker.css -->
-  <link href="{% static 'css/water_tracker.css' %}" rel="stylesheet">
+  <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
 
 </head>
 
@@ -83,34 +83,36 @@
 
   <!-- Main Content -->
   {% block body %}
-  <div class="container">
+  <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
+  <h3></h3>
+  <h2>Set goals and log your water consumption throughout the day!</h2>
+  <img class="water" src="{% static 'water.png' %}">
 
-    <h2><pre> </pre></h2> <!-- for spacing -->
-    <h3>
-      <pre>{{ water_goal }} oz         {{ water_consumed }} oz          {{ percent_complete }}%</pre>
-    </h3>
-    <h5>
-      <pre>          Goal         Water Consumed      Percent Complete</pre>
-    </h5>
-    
-    <h3><pre> </pre></h3> <!-- for spacing -->
+    <pre>
+    <h3>{{ water_goal }} oz              {{ water_consumed }} oz              {{ percent_complete }}%</h3>
+    <h5 class="label">              Goal             Water Consumed       Percent Complete</h5>
+    </pre>
+
+    <div id="grad1"></div>
+
     {% if is_put %}
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" class="button">Update</button>
+      <button type="submit">Update</button>
     </form>
     {% endif %}
     {% if not is_put %}
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit">Set Goal</button>
+      <div class="setGoal">
+        <button type="submit">Set Goal</button>
+      </div>
     </form>
     {% endif %}
     <h3><pre> </pre></h3> <!-- for spacing -->
     <!-- <h4><pre>You got this</pre></h4> -->
-  </div>
   {% endblock %}
 
   <hr>
@@ -120,7 +122,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p class="copyright text-muted">Copyright &copy; VMware Borathon 2020</p>
+          <p class="copyright text-muted">made with <span style="font-size:100%;color:black;">&hearts;</span> by the VMwellness Borathon Team</p>
         </div>
       </div>
     </div>
