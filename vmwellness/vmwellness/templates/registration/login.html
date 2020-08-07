@@ -14,6 +14,9 @@
   <div id="grad1"></div>
   <div class="chunk">
     <h3></h3>
+    {% if loginfail %}
+    <h4>Your login didn't match our records</h4>
+    {% endif%}
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
