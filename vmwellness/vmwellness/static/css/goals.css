@@ -22,6 +22,8 @@ a {
 
 }
 
+
+
 h1 {
      font-size: 28px;
      font-family: 'Metropolis';
@@ -31,7 +33,6 @@ h1 {
 
 p {
     margin-top: 3%;
-    text-decoration: underline;
     font-size: 10px;
 }
 
