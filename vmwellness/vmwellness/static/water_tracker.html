@@ -93,27 +93,30 @@
     <h5 class="label">              Goal             Water Consumed       Percent Complete</h5>
     </pre>
 
-    <div id="grad1"></div>
-
-    {% if is_put %}
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">Update</button>
-    </form>
-    {% endif %}
-    {% if not is_put %}
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <div class="setGoal">
-        <button type="submit">Set Goal</button>
-      </div>
-    </form>
-    {% endif %}
-    <h3><pre> </pre></h3> <!-- for spacing -->
-    <!-- <h4><pre>You got this</pre></h4> -->
-  {% endblock %}
+    <div class="consumption"> 
+      <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
+      {% if is_put %}
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+      </form>
+      {% endif %}
+      {% if not is_put %}
+      <form method="post">
+        <div class="chunk">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="chunk">
+            <button type="submit">Set Goal</button>
+          </div>
+        </div>
+      </form>
+      {% endif %}
+      <h3><pre> </pre></h3> <!-- for spacing -->
+      <!-- <h4><pre>You got this</pre></h4> -->
+    {% endblock %}
+    </div>
 
   <hr>
 
