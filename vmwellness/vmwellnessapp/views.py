@@ -13,6 +13,7 @@ from vmwellness.forms import *
 def login_request(request):
     if request.user.is_authenticated:
         return redirect('/logout')
+    args = {}
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
@@ -22,10 +23,14 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 return redirect('/dashboard')
+            args['loginfail'] = False
+        else:
+            args['loginfail'] = True
     form = AuthenticationForm()
+    args['form'] = form
     return render(request = request,
                   template_name = "registration/login.html",
-                  context={"form":form})
+                  context=args)
 
 def signup(request):
     if request.method == 'POST':
