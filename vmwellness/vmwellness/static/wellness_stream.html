@@ -84,6 +84,7 @@
 
   <!-- Main Content -->
   {% block body %}
+  <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
   <div class="container">
     <h2>Share your Wellness Activities!</h2>
     {% if do_post %}
@@ -97,11 +98,11 @@
 
         {% for item in activies %}
             <h1>{{ item.status }}</h1>
-            <p>Posted by {{ item.name }} on {{ item.post_time }}</p>
-        {% endfor %}
+            <h1 class="post-data">Posted by {{ item.name }} on {{ item.post_time }}</h1>
+            <hr class="line">
+            {% endfor %}
 
     {% endblock %}
-
 
   <!-- Footer -->
   <footer>
