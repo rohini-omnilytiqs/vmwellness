@@ -16,11 +16,26 @@
 
  }
 
+.container {
+    margin: auto;
+}
+
+img {
+    margin: auto;
+    width: auto;
+}
+
  .site-heading {
     font-weight: bolder;
     color: #ffffff;
     font-size: 20px;
  }
+
+.header {
+   font-size: 30px;
+   font-family: 'Metropolis';
+   color: #000000;
+}
 
  h1 {
       font-size: 28px;
@@ -31,13 +46,13 @@
 
 p {
      margin-top: 3%;
-     text-decoration: underline
      font_size: 10px;
  }
 
 h2, h3 {
      font-size: 28px;
      font-family: 'Metropolis';
+     color: #000000;
      text-align: center;
      margin-top: 3%;
  }

@@ -9,6 +9,9 @@
     font-family: 'Metropolis';
 }
 
+.django {
+   margin: auto;
+}
 
 .post-data {
    font-size: 12px;
@@ -24,7 +27,7 @@
   margin: 40px 40px;
 }
 
-button{
+button {
      margin: 40px 40px;
 }
 
