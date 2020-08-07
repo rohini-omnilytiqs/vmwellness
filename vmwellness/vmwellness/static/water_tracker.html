@@ -74,7 +74,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>WMwellness Water Tracker</h1>
+            <h1>VMwellness Water Tracker</h1>
             </div>
         </div>
       </div>
@@ -89,8 +89,7 @@
   <img class="water" src="{% static 'water.png' %}">
 
     <pre>
-    <h3>{{ water_goal }} oz              {{ water_consumed }} oz              {{ percent_complete }}%</h3>
-    <h5 class="label">              Goal             Water Consumed       Percent Complete</h5>
+    <h3> Goal: {{ water_goal }} oz        Water Consumed: {{ water_consumed }} oz       Percent Completion: {{ percent_complete }}%</h3>
     </pre>
 
     <div class="consumption"> 

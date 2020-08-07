@@ -28,4 +28,4 @@ class Water(models.Model):
 class Checklist(models.Model):
 
     userId = models.ForeignKey(User, null=True, blank=True, related_name='checklist_userId', on_delete=models.CASCADE)
-    goal = models.TextField()
+    goal = models.TextField(null=True, blank=True, default="var")
