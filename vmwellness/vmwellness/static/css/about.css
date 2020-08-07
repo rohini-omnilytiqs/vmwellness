@@ -16,13 +16,15 @@
 
  }
 
-.container {
-    margin: auto;
-}
+ img {
+     width: 200px;
+ }
 
-img {
-    margin: auto;
-    width: auto;
+ .teamPic {
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
  .site-heading {
