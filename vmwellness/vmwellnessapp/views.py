@@ -11,6 +11,8 @@ from vmwellness.forms import *
 
 # Create your views here.
 def login_request(request):
+    if request.user.is_authenticated:
+        return redirect('/logout')
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
