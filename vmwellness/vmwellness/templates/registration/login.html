@@ -13,6 +13,7 @@
   <h3></h3>
   <div id="grad1"></div>
   <div class="chunk">
+    <h3></h3>
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
@@ -20,7 +21,7 @@
         <button type="submit">Login</button>
       </div>
     </form>
-    <h4 class="words">please sign up if you do not have an account</h4>
+    <h5 class="nav-link" href="signup">or sign up if you do not have an account</h5>
   </div>
   {% endblock %}
 </div>
