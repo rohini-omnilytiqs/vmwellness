@@ -3,7 +3,7 @@
   * Copyright 2013-2020 Start Bootstrap
   * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
   */
-  body {
+body {
     font-size: 20px;
     color: #1A428A;
     font-family: 'Metropolis';
@@ -13,7 +13,6 @@ a {
   font-size: 30px;
   font-family: 'Metropolis';
   color: #1A428A;
-
 }
 
 .disclaimer {
@@ -24,12 +23,10 @@ a {
 }
 
 .workout {
-    background-color: #d1d1d1;
     background-size: cover;
 }
 
 .food {
-    background-color: #e6e6e6;
     height: 100%;
 }
 
