@@ -17,7 +17,7 @@ When the time came for VMware's annual Intern Borathon, our team assembled from 
 Using Django Web Framework, we developed a full-stack application requiring a database backend. You can view our preliminary object relational mapping diagram below.
 ![database](/databaseDesign.png)
 
-Our team recognized it a high priority to maintain consistent branding throughout the application and developed a style guide, featured below.
+Our team recognized the importance of maintaining consistent branding throughout the application and developed a style guide, featured below.
 ![style](/styleGuide.png)
 
 ## Implementation
