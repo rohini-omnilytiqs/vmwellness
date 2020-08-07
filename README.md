@@ -35,3 +35,4 @@ The implementation of our project over a span of 48 hours required lots of pair 
 In future iterations of this product, we would like to:
 - perform stress testing and refiine the backend
 - include Outlook / SlackBot integrations to further encourage wellness in employees' daily lives
+- Coordinate with HR and Marketing to integrate VMwellness through internal communication channels
