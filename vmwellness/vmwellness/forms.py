@@ -28,14 +28,8 @@ class UpdateWaterTrackerForm(forms.ModelForm):
         model = Water
         fields = []
 
-class ChecklistForm(forms.ModelForm):
+class CheckGoalForm(forms.ModelForm):
     class Meta:
         model = Checklist
-        fields = ['goal_one', 'goal_two', 'goal_three','goal_four', 'goal_five']
-        labels = {
-            "goal_one": "First goal",
-            "goal_two": "Second Goal",
-            "goal_three": "Third Goal",
-            "goal_four": "Fourth Goal",
-            "goal_five": "Fifth Goal"
-        }
+        fields = ['goal']
+        labels = {'goal': 'Goal'}
