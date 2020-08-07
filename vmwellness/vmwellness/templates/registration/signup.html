@@ -9,10 +9,19 @@
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
   
   <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
+
+  <div id="grad1"></div>
+  <h3></h3>
+  <h2 class = "steps">Thank you for your interest in our project! Follow the steps below to get started:</h2>
+  <h5 class = "steps">1. Create a user account</h5>
+   <h5 class = "steps">2. Log in to your account</h5>
+   <h5 class = "steps">3. Enjoy your VMwellness platform</h5>
+
+  <h3></h3>
+  <div id="grad1"></div>
   <h3></h3>
   <h2>Sign Up</h2>
   <h3></h3>
-  <div id="grad1"></div>
   <div class="chunk">
     <form method="post">
       {% csrf_token %}
@@ -22,6 +31,7 @@
       </div>
     </form>
   </div>
+
   {% endblock %}
 </div>
 
