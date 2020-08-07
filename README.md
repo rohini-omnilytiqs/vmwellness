@@ -1,6 +1,6 @@
 # VMwellness Borathon Project
 ![dashboard](/dash.png)
-[View our web application here!](http://ec2-18-232-184-204.compute-1.amazonaws.com:8000/signup/http:// "View our web application here!")
+[View our web application here!](http://ec2-18-232-184-204.compute-1.amazonaws.com:8000)
 
 ## The Team
 - Maya Subramanian, Computer Science @ Michigan 2022
