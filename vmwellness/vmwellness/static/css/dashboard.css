@@ -1,0 +1,172 @@
+/*!
+  * Start Bootstrap - Clean Blog v5.0.9 (https://startbootstrap.com/themes/clean-blog)
+  * Copyright 2013-2020 Start Bootstrap
+  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
+  */
+body {
+    font-size: 20px;
+    color: #1A428A;
+    font-family: 'Metropolis';
+}
+
+a {
+  font-size: 30px;
+  font-family: 'Metropolis';
+  color: #1A428A;
+
+}
+
+.feats {
+    width: 850px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-heading {
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 20px;
+ }
+
+h1 {
+     font-size: 28px;
+     font-family: 'Metropolis';
+     text-align: center;
+     margin-top: 5%;
+ }
+
+p {
+    margin-top: 3%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+h2, h3 {
+    font-size: 28px;
+    font-family: 'Metropolis';
+    text-align: center;
+    margin-top: 3%;
+    color: #000000;
+}
+
+a {
+    color: #00C1D5;
+    transition: all .2s
+}
+
+a:focus, a:hover {
+    color: #00C1D5;
+}
+
+#mainNav {
+    position: absolute;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #fff;
+    font-family: 'Metropolis';
+}
+
+#mainNav .navbar-brand {
+    font-weight: 500;
+    color: #343a40
+}
+
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #343a40
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Metropolis';
+    font-weight: 800;
+    font-style: normal;
+}
+
+@media only screen and (min-width: 992px) {
+    #mainNav {
+        border-bottom: 1px solid transparent;
+        background: 0 0
+    }
+
+    #mainNav .navbar-brand {
+        padding: 10px 20px;
+        color: #fff
+    }
+
+    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+        color: rgba(255, 255, 255, .8)
+    }
+
+    #mainNav .navbar-nav > li.nav-item > a {
+        padding: 10px 20px;
+        color: #fff
+    }
+
+    #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
+        color: rgba(255, 255, 255, .8)
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #mainNav {
+        transition: background-color .2s;
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden
+    }
+
+    #mainNav.is-fixed {
+        position: fixed;
+        top: -67px;
+        transition: transform .2s;
+        border-bottom: 1px solid #fff;
+        background-color: rgba(255, 255, 255, .9)
+    }
+
+    #mainNav.is-fixed .navbar-brand {
+        color: #212529
+    }
+
+    #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
+        color: #0085a1
+    }
+
+    #mainNav.is-fixed .navbar-nav > li.nav-item > a {
+        color: #212529
+    }
+
+    #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
+        color: #0085a1
+    }
+
+}
+
+header.masthead {
+   background: no-repeat center center;
+   padding: 60px;
+   text-align: center;
+   background: linear-gradient(to bottom right, #78be20 0%, #0090d2 100%);
+   font-size: 30px;
+}
+
+
+footer {
+    padding: 50px 0 65px
+}
+
+footer .list-inline {
+    margin: 0;
+    padding: 0
+}
+
+footer .copyright {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center
+}

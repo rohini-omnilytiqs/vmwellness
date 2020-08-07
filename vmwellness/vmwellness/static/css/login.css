@@ -1,0 +1,23 @@
+.login {
+  font-size: 20px;
+  color: #1A428A;
+  font-family: 'Metropolis';
+}
+
+.post {
+  font-size: 20px;
+  color: #1A428A;
+  font-family: 'Metropolis';
+}
+
+h2, h4 {
+font-size: 30px;
+font-family: 'Metropolis';
+color: #1A428A;
+}
+
+form {
+font-size: 30px;
+font-family: 'Metropolis';
+color: #1A428A;
+}

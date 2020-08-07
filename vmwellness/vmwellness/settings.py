@@ -14,7 +14,17 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.join(os.getcwd(), "../")
+BASE_DIR = str(os.path.join(os.getcwd(), '../'))
+
+# create a project root
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
+# create static file directory
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+    BASE_DIR + 'vmwellness/vmwellness/templates',
+)
+STATIC_URL = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -23,7 +33,7 @@ BASE_DIR = os.path.join(os.getcwd(), "../")
 SECRET_KEY = 'ag8v7&)2xizfqz1xgbh8inetkrfnzm%pc4#5^git!uhnq!fz*q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -31,9 +41,9 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'vmwellness',
-    'django.contrib.admin',
+    'vmwellnessapp',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -55,7 +65,7 @@ ROOT_URLCONF = 'vmwellness.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': STATICFILES_DIRS,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +87,7 @@ WSGI_APPLICATION = 'vmwellness.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

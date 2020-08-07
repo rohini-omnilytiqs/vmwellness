@@ -13,20 +13,20 @@
 
   <title>VMwellness</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap core CSS -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-  <!-- font -->
+  <!-- Custom fonts for this template -->
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
 
-  <!-- about.css -->
-  <link href="{% static 'css/about.css' %}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- nav bar -->
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="dashboard">VMwellness</a>
@@ -75,7 +75,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>About VMwellness</h1>
+            <h1>Welcome to your Interactive Wellness Platform</h1>
             </div>
         </div>
       </div>
@@ -84,13 +84,18 @@
 
   <!-- Main Content -->
   <div class="container">
-    <h2 class="header">Our Initiative</h2>
-    <p>VMwellness is an interactive web application designed to help employees celebrate as they take charge of their personal wellness goals. Our features and resources enable employees to prioritize healthy practices in the workspace. During a global pandemic, where employees are forced to create new offices from their home, the transition can be taxing on overall wellbeing. Our goal is to create an interactive space where employees can prioritize their own wellbeing as they work from home and transition back into the office.
-</p>
 
-    <h2 class="header">Meet the VMwelless Team</h2>
-    <img class="teamPic" src="{% static 'team.png' %}">
+    {% block body %}
+    <h2>Welcome{{ username }}!</h2>
+    <p>
+      VMwellness is an interactive web application made to help employees track their own personal wellness goals. During a global pandemic, where employees are challenged to create new offices from their home, the transition can be taxing on overall wellbeing. It is our hope that this web application serves as an interactive space for you to prioritize your wellbeing throughout the work day.
+    </p>
+    {% endblock %}
+
+    <img class="feats" src="{% static 'dash.png' %}">
   </div>
+  
+
 
   <hr>
 
@@ -99,7 +104,35 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p class="copyright text-muted">made with <span style="font-size:100%;color:black;">&hearts;</span> by the VMwellness Borathon Team</p>        </div>
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">made with <span style="font-size:100%;color:black;">&hearts;</span> by the VMwellness Borathon Team</p>
+        </p>
+        </div>
       </div>
     </div>
   </footer>

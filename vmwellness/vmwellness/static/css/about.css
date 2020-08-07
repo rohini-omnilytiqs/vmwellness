@@ -3,21 +3,6 @@
   * Copyright 2013-2020 Start Bootstrap
   * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
   */
-*{
-    box-sizing: border-box;
-}
-
-.column {
-    float: right;
-    width: 33.33%;
-    padding: 5px;
-}
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
  body {
      font-size: 20px;
      color: #1A428A;
@@ -28,8 +13,30 @@
    font-size: 30px;
    font-family: 'Metropolis';
    color: #1A428A;
-
  }
+
+ img {
+     width: 200px;
+ }
+
+ .teamPic {
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ .site-heading {
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 20px;
+ }
+
+.header {
+   font-size: 30px;
+   font-family: 'Metropolis';
+   color: #000000;
+}
 
  h1 {
       font-size: 28px;
@@ -40,13 +47,13 @@
 
 p {
      margin-top: 3%;
-     text-decoration: underline
      font_size: 10px;
  }
 
 h2, h3 {
      font-size: 28px;
      font-family: 'Metropolis';
+     color: #000000;
      text-align: center;
      margin-top: 3%;
  }
@@ -154,15 +161,6 @@ h2, h3 {
     background: linear-gradient(to bottom right, #78be20 0%, #0090d2 100%);
     font-size: 30px;
  }
-
- img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-     width: 50%;
-}
 
 
  footer {

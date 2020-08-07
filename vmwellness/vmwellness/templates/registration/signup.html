@@ -1,0 +1,27 @@
+
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}Sign Up{% endblock %}
+
+<div class="loginpage">
+  {% block content %}
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
+  
+  <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
+  <h3></h3>
+  <h2>Sign Up</h2>
+  <h3></h3>
+  <div id="grad1"></div>
+  <div class="chunk">
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="chunk">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+  {% endblock %}
+</div>
+

@@ -14,8 +14,28 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.urls import path
+from django.conf.urls import include, url
+from django.contrib.auth.forms import UserCreationForm
+from vmwellnessapp import views as v
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^$', v.Dashboard.as_view(), name="dashboard"),
+    url(r'^dashboard/?$', v.Dashboard.as_view(), name="dashboard"),
+    url(r'^water/?$', v.WaterTracker.as_view()),
+    url(r'^activitystream/?$', v.ActivityStream.as_view()),
+    url(r'^goals/?$', v.goals, name='goals'),
+    path('addGoalItem/',v.addGoalView),
+    url(r'^resources/?$', v.Resources.as_view()),
+    url(r'^about/?$', v.About.as_view()),
+    path('signup/',v.signup,name="sign-up"),
+    path('deleteGoalItem/<int:goal>/', v.deleteGoalView), 
+    path('logout/', v.logout_request, name='logout'),
+    url(r'^login/$', v.login_request, name='login')
 ]
+
+urlpatterns += staticfiles_urlpatterns()
