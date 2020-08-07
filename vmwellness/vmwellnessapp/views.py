@@ -77,6 +77,8 @@ class WaterTracker(TemplateView):
     def get(self, request):
         # in the future be able to make request with no objects
         # check to make user is logged on:
+        if not request.user.is_authenticated:
+            return redirect('/login')
         try:
             obj = Water.objects.get(userId=request.user)
             form = UpdateWaterTrackerForm()
@@ -144,6 +146,8 @@ class ActivityStream(TemplateView):
     template_name = 'wellness_stream.html'
 
     def get(self, request):
+        if not request.user.is_authenticated:
+            return redirect('/login')
         form = ActiviesForm()
         activies = Activies.objects.order_by('-post_time') #query set which contains stuff from the table
         args = {'activies': activies, 'form': form, 'do_post':True}
@@ -163,6 +167,8 @@ class ActivityStream(TemplateView):
 
 # create goals class
 def goals(request):
+    if not request.user.is_authenticated:
+        return redirect('/login')
     goals = Checklist.objects.filter(userId=request.user)
     return render(request, 'goals.html', {'goals':goals})
 
