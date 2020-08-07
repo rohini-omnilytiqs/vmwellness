@@ -9,10 +9,12 @@
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
   
   <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
+
+  <h3></h3>
+  <div id="grad1"></div>
   <h3></h3>
   <h2>Sign Up</h2>
   <h3></h3>
-  <div id="grad1"></div>
   <div class="chunk">
     <form method="post">
       {% csrf_token %}
@@ -22,6 +24,7 @@
       </div>
     </form>
   </div>
+
   {% endblock %}
 </div>
 
