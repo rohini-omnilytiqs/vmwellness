@@ -1,6 +1,19 @@
 {% extends '../base.html' %}
+{% load static %}
+{% block title %}Log Out{% endblock %}
 
-{% block content %}
+<div class="loginpage">
+  {% block content %}
+  <!-- Custom fonts for this template -->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css"/>
+  
+  <link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
+  <h3></h3>
   <h2>Logout Successful!</h2>
-  <p><a href="{% url 'dashboard' %}">Return to Dashboard</a></p>
-{% endblock %}
+  <h3></h3>
+  <div class="chunk">
+    <p><a href="{% url 'dashboard' %}">Return to Dashboard</a></p>
+  </div>
+  {% endblock %}
+</div>
+
