@@ -9,6 +9,17 @@
     font-family: 'Metropolis';
 }
 
+
+.post-data {
+   font-size: 12px;
+    color: #1A428A;
+    font-family: 'Metropolis';
+}
+
+.line {
+   border: .1px solid #717074;
+}
+
 .button{
   margin: 40px 40px;
 }
@@ -47,6 +58,7 @@ h2, h3 {
    font-size: 28px;
    font-family: 'Metropolis';
    text-align: center;
+   color: #ffffff;   /* this is a change */
    margin-top: 3%;
 }
 

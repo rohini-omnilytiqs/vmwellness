@@ -1,9 +1,11 @@
 {% extends '../base.html' %}
-
+{% load static %}
 {% block title %}Sign Up{% endblock %}
 
+
 {% block content %}
-  <h2>Login</h2>
+<link href="{% static 'css/wellness_stream.css' %}" rel="stylesheet">
+<h2>Login</h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
