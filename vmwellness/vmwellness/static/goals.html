@@ -82,10 +82,23 @@
   </header>
 
   <!-- Main Content -->
+  {% block body %}
   <div class="container">
-    <h2>Personal Goals</h2>
-    <p>goals would go here</p>
+    <h2><pre></pre></h2>
+    <form action="/addGoalItem/" method = "post">{% csrf_token %}
+      <input type="text" name="goal">
+      <input type="submit" value="Add Goal">
+  </form> 
+  <h2><pre> </pre></h2>
+  {% for goal in goals %}
+  <li>{{ goal.goal }}
+    <form action="/deleteGoalItem/{{goal.id}}/" method = "post">{% csrf_token %}
+      <input type="submit" value="Accomplished">
+    </li>
+    {% endfor %}
+ </form>  
   </div>
+  {% endblock %}
 
   <hr>
 

@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login, logout
 #from django.contrib.auth.views import logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from vmwellnessapp.models import Water, Activies, Checklist
 from django.views.generic import TemplateView
 
@@ -157,12 +157,21 @@ class ActivityStream(TemplateView):
         args = {'form':form}
         return render(request, self.template_name, args)
 
-        # create goals class
-class Goals(TemplateView):
-    template_name = 'goals.html'
+# create goals class
+def goals(request):
+    goals = Checklist.objects.filter(userId=request.user)
+    return render(request, 'goals.html', {'goals':goals})
 
-    def get(self, request):
-        return render(request, self.template_name)
+def addGoalView(request):
+    x = request.POST['goal']
+    new_goal = Checklist(goal = x, userId=request.user)
+    new_goal.save()
+    return HttpResponseRedirect('/goals') 
+
+def deleteGoalView(request, goal):
+    y = Checklist.objects.get(id= goal)
+    y.delete()
+    return HttpResponseRedirect('/goals')
 
 
 # create resources class
@@ -177,6 +186,5 @@ class Resources(TemplateView):
 class About(TemplateView):
     template_name = 'about.html'
 
-    # def get(self, request):
-    #     return render(request, self.template_name)
-    pass
+    def get(self, request):
+        return render(request, self.template_name)

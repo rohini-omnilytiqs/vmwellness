@@ -28,13 +28,4 @@ class Water(models.Model):
 class Checklist(models.Model):
 
     userId = models.ForeignKey(User, null=True, blank=True, related_name='checklist_userId', on_delete=models.CASCADE)
-    goal_one = models.TextField(null=True, blank=True)
-    goal_one_completed = models.BooleanField(default=False)
-    goal_two = models.TextField(null=True, blank=True)
-    goal_two_completed = models.BooleanField(default=False)
-    goal_three = models.TextField(null=True, blank=True)
-    goal_three_completed = models.BooleanField(default=False)
-    goal_four = models.TextField(null=True, blank=True)
-    goal_four_completed = models.BooleanField(default=False)
-    goal_five = models.TextField(null=True, blank=True)
-    goal_five_completed = models.BooleanField(default=False)
+    goal = models.TextField()
