@@ -1,4 +1,5 @@
 # VMwellness Borathon Project
+![dashboard](/dash.png)
 [View our web application here!](http://ec2-18-232-184-204.compute-1.amazonaws.com:8000/signup/http:// "View our web application here!")
 
 ## The Team
@@ -12,11 +13,11 @@
 ## Problem Statement
 When the time came for VMware's annual Intern Borathon, our team assembled from a diverse range of business units, locations, and majors. We bonded over our shared interest in developing a high-impact product to improve the employee experience, and decided to develop a Wellness Platform as a technology response to COVID-19.
 
-## Design
+## Project Design
 Using Django Web Framework, we developed a full-stack application requiring a database backend. You can view our preliminary object relational mapping diagram below.
 ![database](/databaseDesign.png)
 
-Additionally, we agreed that it was a high priority to maintain consistent branding throughout the application and developed a style guide, featured below.
+Our team recognized it a high priority to maintain consistent branding throughout the application and developed a style guide, featured below.
 ![style](/styleGuide.png)
 
 ## Implementation
