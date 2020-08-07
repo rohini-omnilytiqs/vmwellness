@@ -5,22 +5,84 @@
   */
 pre {
      font-size: 20px;
-     color: #1A428A;
+     color: #0090d2;
      font-family: 'Metropolis';
+     margin: auto;
  }
+
+ button {
+   background-color: #0090d2;
+   border: none;
+   color: white;
+   padding: 10px 28px;
+   text-align: center;
+   font-size: 16px;
+   margin: 4px 2px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   text-decoration: none;
+   cursor: pointer;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+button {border-radius: 12px;}
+
+button:hover {opacity: 1}
 
 .button{
    margin: 40px 40px;
+}
+
+.amount {
+   font-size: 20px;
+   font-family: 'Metropolis';
+   color: #0090d2;
+   text-align: center;
+}
+
+.submit {
+   background-color: #00c1d5;
+   border: none;
+   color: white;
+   padding: 10px 28px;
+   text-align: center;
+   font-size: 16px;
+   margin: 4px 2px;
+   opacity: 0.6;
+   transition: 0.3s;
+   display: inline-block;
+   text-decoration: none;
+   cursor: pointer;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+.label {
+   font-size: 20px;
+   font-family: 'Metropolis';
+   color: #78be20;
+   text-align: center;
 }
 
 .button{
       margin: 40px 40px;
 }
 
-h3, h5 {
+h3 {
    font-size: 30px;
    font-family: 'Metropolis';
-   color: #1A428A;
+   color: #0090d2;
+   text-align: center;
+   margin: auto;
+}
+
+h5 {
+   font-size: 30px;
+   font-family: 'Metropolis';
+   color: #78be20;
+   text-align: center;
 }
 
 .site-heading {
@@ -44,8 +106,8 @@ h1 {
 
 p {
     margin-top: 3%;
-    text-decoration: underline;
     font-size: 10px;
+    text-decoration: none;
  }
 
 h2 {
