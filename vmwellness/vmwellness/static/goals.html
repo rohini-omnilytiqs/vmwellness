@@ -83,18 +83,24 @@
 
   <!-- Main Content -->
   {% block body %}
+  <link href="{% static 'css/goals.css' %}" rel="stylesheet">
   <div class="container">
     <h2><pre></pre></h2>
-    <form action="/addGoalItem/" method = "post">{% csrf_token %}
-      <input type="text" name="goal">
-      <input type="submit" value="Add Goal">
+    <div class="textbox">
+      <form action="/addGoalItem/" method = "post">{% csrf_token %}
+        <input type="text" name="goal">
+        <input type="submit" value="Add Goal">
+    </div>
   </form> 
   <h2><pre> </pre></h2>
   {% for goal in goals %}
-  <li>{{ goal.goal }}
+  <div class="thumb">{{ goal.goal }}
     <form action="/deleteGoalItem/{{goal.id}}/" method = "post">{% csrf_token %}
-      <input type="submit" value="Accomplished">
-    </li>
+      <div class="thumb">
+        <input type="submit" value="Accomplished">
+      </div>
+    </div>
+    <hr class="line">
     {% endfor %}
  </form>  
   </div>
