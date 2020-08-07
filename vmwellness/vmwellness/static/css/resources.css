@@ -147,6 +147,13 @@ a:focus, a:hover {
     color: #343a40
 }
 
+h1 {
+    font-size: 28px;
+    font-family: 'Metropolis';
+    text-align: center;
+    margin-top: 5%;
+}
+
 #mainNav .navbar-toggler {
     font-size: 12px;
     font-weight: 800;
@@ -158,7 +165,7 @@ a:focus, a:hover {
 #mainNav .navbar-nav > li.nav-item > a {
     font-size: 12px;
     letter-spacing: 1px;
-    text-transform: uppercase
+    text-transform: uppercase;
     font-family: 'Metropolis';
     font-weight: 800;
     font-style: normal;
