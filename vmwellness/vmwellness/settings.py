@@ -33,7 +33,7 @@ STATIC_URL = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static')
 SECRET_KEY = 'ag8v7&)2xizfqz1xgbh8inetkrfnzm%pc4#5^git!uhnq!fz*q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
