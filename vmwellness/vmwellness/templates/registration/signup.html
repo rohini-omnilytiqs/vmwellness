@@ -1,3 +1,4 @@
+
 {% extends '../base.html' %}
 {% load static %}
 {% block title %}Sign Up{% endblock %}
@@ -12,10 +13,15 @@
   <h2>Sign Up</h2>
   <h3></h3>
   <div id="grad1"></div>
+  <div class="chunk">
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit">Register</button>
+      <div class="chunk">
+        <button type="submit">Register</button>
+      </div>
     </form>
+  </div>
   {% endblock %}
 </div>
+

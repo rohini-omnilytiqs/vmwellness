@@ -12,12 +12,16 @@
   <h2>Login</h2>
   <h3></h3>
   <div id="grad1"></div>
+  <div class="chunk">
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit">Login</button>
+      <div class="chunk">
+        <button type="submit">Login</button>
+      </div>
     </form>
-    <h4 href="signup">Or Sign Up</h4>
+    <h4 class="words">please sign up if you do not have an account</h4>
+  </div>
   {% endblock %}
 </div>
 
